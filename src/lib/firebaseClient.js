@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Updated config parameters specifically matching your screenshot project node
+// 🚀 FIX: Updated credentials to link directly with your active 'rupp-wct-final' project nodes
 const firebaseConfig = {
   apiKey: "AIzaSyBWtICa7Dns6y7B4P9C1FXMKffSTaVqEBU",
-  authDomain: "://firebaseapp.com",
-  projectId: "my-react-app-8e8ab", // <-- Changed to match your screenshot ID exactly!
-  storageBucket: "my-react-app-8e8ab.firebasestorage.app",
+  authDomain: "rupp-wct-final.firebaseapp.com", // 👈 Updated
+  projectId: "rupp-wct-final",                   // 👈 Updated to match your true Firebase project ID
+  storageBucket: "rupp-wct-final.firebasestorage.app", // 👈 Updated
   messagingSenderId: "36421953963",
   appId: "1:36421953963:web:1bf4c17290444508b73fee"
 };
