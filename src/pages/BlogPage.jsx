@@ -61,7 +61,12 @@ export default function BlogPage() {
         <div className="lg:col-span-2 space-y-8">
           
           <div className="w-full rounded-xl overflow-hidden shadow-sm border border-gray-100">
-            <img src="/images/graduates.jpg" alt="RUPP Graduates" className="w-full h-auto max-h-80 object-cover block" />
+            {/* 🚀 FIX: Appended Vite's dynamic base URL prefix using a template literal string */}
+            <img 
+              src={`${import.meta.env.BASE_URL}images/graduates.jpg`} 
+              alt="RUPP Graduates" 
+              className="w-full h-auto max-h-80 object-cover block" 
+            />
           </div>
 
           <div className="text-left">

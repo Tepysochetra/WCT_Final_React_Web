@@ -14,12 +14,14 @@ export default function Navbar({ onToggleSidebar, setPage, currentPage }) {
       
       {/* 1. RUPP Logo Branding Crest */}
       <div className="cursor-pointer flex items-center" onClick={() => setPage('home')}>
-        <img 
-          src="/images/rupp_logo.png" 
-          alt="RUPP Logo" 
-          className="w-[85px] md:w-[110px] h-auto object-contain transition-transform duration-300 hover:scale-105" 
-        />
+      <img 
+        /* 🚀 FIX: Appended Vite's dynamic base URL prefix using curly braces and backticks */
+        src={`${import.meta.env.BASE_URL}images/rupp_logo.png`} 
+        alt="RUPP Logo" 
+        className="w-[85px] md:w-[110px] h-auto object-contain transition-transform duration-300 hover:scale-105" 
+      />
       </div>
+
 
       {/* 2. Desktop Links Row View */}
       <ul className="hidden md:flex space-x-9 items-center m-0 p-0">

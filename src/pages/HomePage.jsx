@@ -5,11 +5,11 @@ export default function HomePage() {
     { title: "Postgraduate Programs", desc: '"Advanced Master\'s and Ph.D. research degrees focusing on academic specialization, field innovations, global publication, and institutional development."' }
   ];
 
-  // Upgraded data matrix holding the true captions for your RUPP images
+  // 🚀 FIX: Appended Vite's dynamic base URL prefix to your array string image paths
   const campusCards = [
-    { name: "Auditorium Hall", img: "/images/Auditorium_Hall2.png" },
-    { name: "Hun Sen Library", img: "/images/library2.png" },
-    { name: "STEM Building", img: "/images/stem2.png" }
+    { name: "Auditorium Hall", img: `${import.meta.env.BASE_URL}images/Auditorium_Hall2.png` },
+    { name: "Hun Sen Library", img: `${import.meta.env.BASE_URL}images/library2.png` },
+    { name: "STEM Building", img: `${import.meta.env.BASE_URL}images/stem2.png` }
   ];
 
   return (
@@ -19,7 +19,8 @@ export default function HomePage() {
       <section 
         className="min-h-screen w-full bg-cover bg-center relative flex flex-col justify-center text-center px-4"
         style={{ 
-          backgroundImage: `linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('/images/Pages.jpg')` 
+          /* 🚀 FIX: Modified the style block to string-inject the base path into your CSS background-image url */
+          backgroundImage: `linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('${import.meta.env.BASE_URL}images/Pages.jpg')` 
         }}
       >
         <div className="text-white max-w-4xl mx-auto z-10">

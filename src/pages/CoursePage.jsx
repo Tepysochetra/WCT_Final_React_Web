@@ -1,19 +1,20 @@
 export default function CoursePage() {
   // Assigning your unique RUPP image assets to each specific card track!
+  // 🚀 FIX: Appended Vite's dynamic base URL prefix to your array string image paths
   const facilitiesList = [
     { 
       title: "Hun Sen Library", 
-      img: "/images/library.jpg",
+      img: `${import.meta.env.BASE_URL}images/library.jpg`,
       desc: "Information tracking core digital architectures, physical references, and student study pipelines."
     },
     { 
       title: "Digital Research Lab", 
-      img: "/images/library2.png", // <-- Uses your library2.png asset smoothly!
+      img: `${import.meta.env.BASE_URL}images/library2.png`, // <-- Uses your library2.png asset smoothly!
       desc: "Equipped with advanced processing arrays and server grids to foster engineering model development."
     },
     { 
       title: "Global Study Center", 
-      img: "/images/stem2.png", // <-- Uses your stem2.png asset smoothly!
+      img: `${import.meta.env.BASE_URL}images/stem2.png`, // <-- Uses your stem2.png asset smoothly!
       desc: "An international collaborative space hosting student exchanges, global seminars, and research forums."
     }
   ];

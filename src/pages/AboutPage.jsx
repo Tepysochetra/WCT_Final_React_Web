@@ -27,7 +27,8 @@ export default function AboutPage() {
         {/* Right Column: Image Asset */}
         <div className="md:w-1/2 w-full">
           <img 
-            src="/images/image.png" 
+            /* 🚀 FIX: Added Vite's dynamic base URL prefix using a template literal string */
+            src={`${import.meta.env.BASE_URL}images/image.png`} 
             alt="About us" 
             className="w-full h-auto rounded-xl shadow-md border border-gray-100 object-cover max-h-72 transition-transform duration-300 hover:scale-[1.01]"
             onError={(e) => {
